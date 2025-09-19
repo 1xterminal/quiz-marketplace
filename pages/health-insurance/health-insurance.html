@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance - Tameng Insurance</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="../../index.html" class="navbar-logo">Tameng</a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-links active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-links">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-links">Contact</a>
+                        </li>
+                    </ul>
+                    <div id="auth-links" class="auth-links"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="section-container">
+                <div class="form-card">
+                    <div class="progress-bar">
+                        <div class="progress-step active">
+                            <div class="step-number">1</div>
+                            <div class="step-name">Details</div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-number">2</div>
+                            <div class="step-name">Payment</div>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Health Insurance Details</h2>
+                    <form id="health-insurance-form">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="full-name">Nama lengkap (sesuai KTP)</label>
+                                <span class="material-icons">person</span>
+                                <input type="text" id="full-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Tanggal lahir</label>
+                                <span class="material-icons">cake</span>
+                                <input type="date" id="dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="occupation">Pekerjaan</label>
+                                <span class="material-icons">work</span>
+                                <input type="text" id="occupation" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Merokok</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="smoker-yes" name="smoker" value="1" required> <label for="smoker-yes">Ya</label>
+                                    <input type="radio" id="smoker-no" name="smoker" value="0"> <label for="smoker-no">Tidak</label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Riwayat hipertensi</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="hypertension-yes" name="hypertension" value="1" required> <label for="hypertension-yes">Ya</label>
+                                    <input type="radio" id="hypertension-no" name="hypertension" value="0"> <label for="hypertension-no">Tidak</label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Diabetes</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="diabetes-yes" name="diabetes" value="1" required> <label for="diabetes-yes">Ya</label>
+                                    <input type="radio" id="diabetes-no" name="diabetes" value="0"> <label for="diabetes-no">Tidak</label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <button type="submit" class="cta-button">Calculate Premium</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="premium-result"></div>
+                    <button id="checkout-button" class="cta-button" style="display: none;">Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section-container">
+            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../public/js/health-insurance.js"></script>
+    <script src="../../public/js/app.js"></script>
+    <script src="../../public/js/auth.js"></script>
+</body>
+</html>

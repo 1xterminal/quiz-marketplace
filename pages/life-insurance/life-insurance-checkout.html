@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance Checkout - Tameng Insurance</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="../../index.html" class="navbar-logo">Tameng</a>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-links active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-links">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-links">Contact</a>
+                        </li>
+                    </ul>
+                    <div id="auth-links" class="auth-links"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="section-container">
+                <div class="form-card">
+                    <div class="progress-bar">
+                        <div class="progress-step done">
+                            <div class="step-number">1</div>
+                            <div class="step-name">Details</div>
+                        </div>
+                        <div class="progress-step active">
+                            <div class="step-number">2</div>
+                            <div class="step-name">Payment</div>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Checkout</h2>
+                    <div id="premium-summary"></div>
+                    <form id="payment-form">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="expiry-date">Expiry Date</label>
+                                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <button type="submit" class="cta-button">Pay Now</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="payment-message"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section-container">
+            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../public/js/life-insurance.js"></script>
+    <script src="../../public/js/app.js"></script>
+    <script src="../../public/js/auth.js"></script>
+</body>
+</html>
