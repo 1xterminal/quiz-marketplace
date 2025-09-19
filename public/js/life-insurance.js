@@ -38,6 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     checkoutButton.addEventListener('click', () => {
-        alert('Redirecting to checkout...');
+        // Do nothing for now
     });
 });

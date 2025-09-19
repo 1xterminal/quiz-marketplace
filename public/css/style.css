@@ -601,3 +601,43 @@ body {
         font-size: 2.2rem;
     }
 }
+
+/* =================================
+   10. TWO COLUMN LAYOUT
+   ================================= */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.form-column {
+    /* No specific styles needed here, inherits from parent */
+}
+
+.result-column {
+    position: sticky;
+    top: 120px; /* 80px navbar + 40px spacing */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.result-column h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+    }
+    .result-column {
+        position: static;
+        top: auto;
+        margin-top: 40px;
+    }
+}

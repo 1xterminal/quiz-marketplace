@@ -40,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     checkoutButton.addEventListener('click', () => {
-        // Redirect to a generic checkout page, or implement further logic
-        alert('Redirecting to checkout...');
-        // window.location.href = 'checkout.html'; // Example redirect
+        // Do nothing for now
     });
 });

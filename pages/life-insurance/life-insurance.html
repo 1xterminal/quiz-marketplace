@@ -33,48 +33,57 @@
     <main>
         <section class="form-section">
             <div class="section-container">
-                <div class="form-card">
-                    <div class="progress-bar">
-                        <div class="progress-step active">
-                            <div class="step-number">1</div>
-                            <div class="step-name">Details</div>
-                        </div>
-                        <div class="progress-step">
-                            <div class="step-number">2</div>
-                            <div class="step-name">Payment</div>
+                <div class="two-column-layout">
+                    <div class="form-column">
+                        <div class="form-card">
+                            <div class="progress-bar">
+                                <div class="progress-step active">
+                                    <div class="step-number">1</div>
+                                    <div class="step-name">Details</div>
+                                </div>
+                                <div class="progress-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-name">Payment</div>
+                                </div>
+                            </div>
+                            <h2 class="section-title">Life Insurance Details</h2>
+                            <form id="life-insurance-form">
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="full-name">Nama lengkap (sesuai KTP)</label>
+                                        <span class="material-icons">person</span>
+                                        <input type="text" id="full-name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dob">Tanggal lahir</label>
+                                        <span class="material-icons">cake</span>
+                                        <input type="date" id="dob" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sum-assured">Besaran pertanggungan</label>
+                                        <span class="material-icons">attach_money</span>
+                                        <select id="sum-assured" required>
+                                            <option value="1000000000">Rp1.000.000.000</option>
+                                            <option value="2000000000">Rp2.000.000.000</option>
+                                            <option value="3500000000">Rp3.500.000.000</option>
+                                            <option value="5000000000">Rp5.000.000.000</option>
+                                            <option value="10000000000">Rp10.000.000.000</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <button type="submit" class="cta-button">Calculate Premium</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <h2 class="section-title">Life Insurance Details</h2>
-                    <form id="life-insurance-form">
-                        <div class="form-grid">
-                            <div class="form-group full-width">
-                                <label for="full-name">Nama lengkap (sesuai KTP)</label>
-                                <span class="material-icons">person</span>
-                                <input type="text" id="full-name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="dob">Tanggal lahir</label>
-                                <span class="material-icons">cake</span>
-                                <input type="date" id="dob" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="sum-assured">Besaran pertanggungan</label>
-                                <span class="material-icons">attach_money</span>
-                                <select id="sum-assured" required>
-                                    <option value="1000000000">Rp1.000.000.000</option>
-                                    <option value="2000000000">Rp2.000.000.000</option>
-                                    <option value="3500000000">Rp3.500.000.000</option>
-                                    <option value="5000000000">Rp5.000.000.000</option>
-                                    <option value="10000000000">Rp10.000.000.000</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <button type="submit" class="cta-button">Calculate Premium</button>
-                            </div>
+                    <div class="result-column">
+                        <h3>Premium Calculation</h3>
+                        <div id="premium-result">
+                            <p>Please fill out the form to see your premium.</p>
                         </div>
-                    </form>
-                    <div id="premium-result"></div>
-                    <button id="checkout-button" class="cta-button" style="display: none;">Checkout</button>
+                        <button id="checkout-button" class="cta-button" style="display: none;">Checkout</button>
+                    </div>
                 </div>
             </div>
         </section>
