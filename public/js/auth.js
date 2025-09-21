@@ -1,7 +1,6 @@
 function checkLoggedIn() {
     const user = JSON.parse(localStorage.getItem('loggedInUser'));
     if (!user) {
-        // Redirect to login page if not logged in
         if (isInsurancePage()) {
             window.location.href = '../../login.html';
         } else {
@@ -15,7 +14,6 @@ function logout() {
     window.location.href = '/index.html';
 }
 
-// Function to check if the current page is an insurance page
 function isInsurancePage() {
     const insurancePages = [
         'car-insurance.html',
@@ -38,10 +36,8 @@ function displayMessage(elementId, message, type) {
             messageDiv.className = '';
         }
 
-        // Clear any existing timeout
         clearTimeout(messageTimeout);
 
-        // Set a new timeout to clear the message after 3 seconds
         if (type === 'error') {
             messageTimeout = setTimeout(() => {
                 displayMessage(elementId, '', '');
@@ -61,7 +57,6 @@ function isValidPhoneNumber(phone) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if the user is logged in if on an insurance page
     if (isInsurancePage()) {
         checkLoggedIn();
     }
@@ -75,10 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = loginForm.email.value.trim();
             const password = loginForm.password.value.trim();
 
-            // Clear previous messages
             displayMessage('message', '', '');
 
-            // Validation
             if (email === '') {
                 displayMessage('message', 'Please enter your email.', 'error');
                 return;
@@ -93,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Simulate login
             const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
 
             if (storedUser && email === storedUser.email && password === storedUser.password) {
@@ -119,10 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = registerForm.password.value.trim();
             const confirmPassword = registerForm['confirm-password'].value.trim();
 
-            // Clear previous messages
             displayMessage('message-register', '', '');
 
-            // Validation
             if (fullname === '') {
                 displayMessage('message-register', 'Please enter your full name.', 'error');
                 return;
@@ -174,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Simulate registration
             const newUser = {
                 fullname: fullname,
                 email: email,

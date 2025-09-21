@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carInsuranceForm = document.getElementById('car-insurance-form');
     const premiumResult = document.getElementById('premium-result');
     const checkoutButton = document.getElementById('checkout-button');
-    let premium = 0; // Declare premium in a higher scope
+    let premium = 0;
 
     carInsuranceForm.addEventListener('submit', (e) => {
         e.preventDefault();

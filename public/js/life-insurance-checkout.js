@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         payNowButton.disabled = true;
     }
 
-    // Event listener for payment option boxes (simplified for CSS-only selection)
     document.getElementById('payment-options-grid').addEventListener('change', (event) => {
         const selectedRadio = event.target;
         if (selectedRadio.type === 'radio' && selectedRadio.name === 'payment-method') {

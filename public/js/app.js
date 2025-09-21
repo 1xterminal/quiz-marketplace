@@ -16,22 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
         authLinks.innerHTML = '<button id="logout-btn">Logout</button>';
         document.getElementById('logout-btn').addEventListener('click', function() {
             localStorage.removeItem('loggedInUser');
-            historyLink.style.display = 'none'; // Hide history link on logout
+            historyLink.style.display = 'none'; 
             const isPages = window.location.pathname.includes('/pages/');
             const loginUrl = isPages ? '../../login.html' : 'login.html';
             window.location.href = loginUrl;
         });
-        historyLink.style.display = 'block'; // Show history link if logged in
+        historyLink.style.display = 'block';
     } else {
         const isPages = window.location.pathname.includes('/pages/');
         const loginUrl = isPages ? '../../login.html' : 'login.html';
         const registerUrl = isPages ? '../../register.html' : 'register.html';
 
         authLinks.innerHTML = `<a href="${loginUrl}">Login</a><a href="${registerUrl}">Sign Up</a>`;
-        historyLink.style.display = 'none'; // Ensure history link is hidden if not logged in
+        historyLink.style.display = 'none'; 
     }
 
-    // New code for expandable content
     const expandButtons = document.querySelectorAll('.expand-button');
 
     expandButtons.forEach(button => {
