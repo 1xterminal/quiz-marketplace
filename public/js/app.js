@@ -34,28 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             const insuranceType = document.getElementById('insurance-type-select').value;
             if (insuranceType) {
-                window.location.href = `pages/${insuranceType}-insurance/${insuranceType}-insurance.html`;
+                window.location.href = `pages/${insuranceType}-insurance/${insuranceType}-insurance-detail.html`;
             }
         });
     }
 
-    // Add event listeners to product cards to redirect to the correct insurance page
-    const productCards = document.querySelectorAll('.product-card');
-    productCards.forEach(card => {
-        card.addEventListener('click', function(event) {
-            event.preventDefault();
-            const cardTitle = this.querySelector('h3').textContent;
-            let insuranceType = '';
-            if (cardTitle.includes('Health')) {
-                insuranceType = 'health';
-            } else if (cardTitle.includes('Car')) {
-                insuranceType = 'car';
-            } else if (cardTitle.includes('Life')) {
-                insuranceType = 'life';
-            }
-            if (insuranceType) {
-                window.location.href = `pages/${insuranceType}-insurance/${insuranceType}-insurance.html`;
-            }
-        });
-    });
+    
 });

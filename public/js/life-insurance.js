@@ -31,13 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
             rate = 0.01;
         }
 
-        const premium = sumAssured * rate;
+        premium = sumAssured * rate;
 
         premiumResult.innerHTML = `<p>Your life insurance premium is: <strong>Rp ${premium.toLocaleString('id-ID')}</strong> per month.</p>`;
         checkoutButton.style.display = 'block';
     });
 
     checkoutButton.addEventListener('click', () => {
-        // Do nothing for now
+        localStorage.setItem('currentPremium', premium);
+        localStorage.setItem('currentProductName', 'Life Insurance'); // Store product name
+        localStorage.setItem('currentProductType', 'Life'); // Store product type
+        window.location.href = '../life-insurance/life-insurance-checkout.html';
     });
 });

@@ -45,27 +45,29 @@
                         </div>
                     </div>
                     <h2 class="section-title">Checkout</h2>
-                    <div id="premium-summary"></div>
-                    <form id="payment-form">
-                        <div class="form-grid">
-                            <div class="form-group full-width">
-                                <label for="card-number">Card Number</label>
-                                <input type="text" id="card-number" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="expiry-date">Expiry Date</label>
-                                <input type="text" id="expiry-date" placeholder="MM/YY" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="cvv">CVV</label>
-                                <input type="text" id="cvv" required>
-                            </div>
-                            <div class="form-group full-width">
-                                <button type="submit" class="cta-button">Pay Now</button>
-                            </div>
+                    <div class="checkout-summary">
+                        <h3>Premium to Pay: <span id="premium-display">Rp 0</span></h3>
+                    </div>
+                    
+                    <div class="payment-methods-selection">
+                        <h3>Choose Payment Method</h3>
+                        <div class="form-group full-width">
+                            <label for="payment-method-select">Payment Method</label>
+                            <select id="payment-method-select" class="form-control" required>
+                                <option value="" disabled selected>Select Payment Method</option>
+                                <option value="credit-card">Credit Card</option>
+                                <option value="virtual-account">Virtual Account (VA)</option>
+                                <option value="e-wallet">E-Wallet</option>
+                                <option value="qris">QRIS</option>
+                            </select>
                         </div>
-                    </form>
-                    <div id="payment-message"></div>
+                        <div id="payment-details-placeholder" style="margin-top: 15px; padding: 15px; border: 1px dashed #ccc; border-radius: 8px; min-height: 50px; text-align: center; color: #666;">
+                            Please select a payment method.
+                        </div>
+                    </div>
+
+                    <button type="button" id="pay-now-button" class="cta-button full-width">Pay Now</button>
+                    <p id="payment-message" style="text-align: center; margin-top: 20px;"></p>
                 </div>
             </div>
         </section>
@@ -75,6 +77,13 @@
         <div class="section-container">
             <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
         </div>
+    </footer>
+
+    <script src="../../public/js/app.js"></script>
+    <script src="../../public/js/auth.js"></script>
+    <script src="../../public/js/health-insurance-checkout.js"></script>
+</body>
+</html>v>
     </footer>
 
     <script src="../../public/js/health-insurance.js"></script>

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const healthInsuranceForm = document.getElementById('health-insurance-form');
     const premiumResult = document.getElementById('premium-result');
     const checkoutButton = document.getElementById('checkout-button');
+    let premium = 0; // Declare premium in a higher scope
 
     healthInsuranceForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -36,13 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
             k = 0.4;
         }
 
-        const premium = basePremium + (k * basePremium) + (smoker * 0.5 * basePremium) + (hypertension * 0.4 * basePremium) + (diabetes * 0.5 * basePremium);
+        premium = basePremium + (k * basePremium) + (smoker * 0.5 * basePremium) + (hypertension * 0.4 * basePremium) + (diabetes * 0.5 * basePremium);
 
         premiumResult.innerHTML = `<p>Your health insurance premium is: <strong>Rp ${premium.toLocaleString('id-ID')}</strong> per year.</p>`;
         checkoutButton.style.display = 'block';
     });
 
     checkoutButton.addEventListener('click', () => {
-        // Do nothing for now
+        localStorage.setItem('currentPremium', premium);
+        localStorage.setItem('currentProductName', 'Health Insurance'); // Store product name
+        localStorage.setItem('currentProductType', 'Health'); // Store product type
+        window.location.href = '../health-insurance/health-insurance-checkout.html';
     });
 });

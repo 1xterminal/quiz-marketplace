@@ -1,3 +1,31 @@
+function checkLoggedIn() {
+    const user = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (!user) {
+        // Redirect to login page if not logged in
+        if (isInsurancePage()) {
+            window.location.href = '../../login.html';
+        } else {
+            window.location.href = '/login.html';
+        }
+    }
+}
+
+function logout() {
+    localStorage.removeItem('loggedInUser');
+    window.location.href = '/index.html';
+}
+
+// Function to check if the current page is an insurance page
+function isInsurancePage() {
+    const insurancePages = [
+        'car-insurance.html',
+        'health-insurance.html',
+        'life-insurance.html'
+    ];
+    const currentPage = window.location.pathname.split('/').pop();
+    return insurancePages.includes(currentPage);
+}
+
 let messageTimeout;
 
 function displayMessage(elementId, message, type) {
@@ -33,6 +61,11 @@ function isValidPhoneNumber(phone) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if the user is logged in if on an insurance page
+    if (isInsurancePage()) {
+        checkLoggedIn();
+    }
+
     const loginForm = document.getElementById('login-form');
     
     if (loginForm) {
