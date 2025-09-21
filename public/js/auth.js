@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
 
             if (storedUser && email === storedUser.email && password === storedUser.password) {
-                displayMessage('message', 'Login successful!', 'success');
+                displayMessage('message', 'Login berhasil!', 'success');
                 const user = { username: storedUser.fullname };
                 localStorage.setItem('loggedInUser', JSON.stringify(user));
                 window.location.href = 'index.html';
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             localStorage.setItem('registeredUser', JSON.stringify(newUser));
 
-            displayMessage('message-register', 'Registration successful! Redirecting to login...', 'success');
+            displayMessage('message-register', 'Pendaftaran berhasil! Mengarahkan ke halaman login...', 'success');
             setTimeout(() => {
                 window.location.href = 'login.html';
             }, 1500);

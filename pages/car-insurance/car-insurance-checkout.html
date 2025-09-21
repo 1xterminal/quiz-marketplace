@@ -1,93 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Insurance Checkout - Tameng Insurance</title>
+    <title>Pembayaran Asuransi Mobil - Asuransi Tameng</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="../../index.html" class="navbar-logo">Tameng</a>
-                <div class="nav-right">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="../../index.html" class="nav-links active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">Contact</a>
-                        </li>
-                    </ul>
-                    <div id="auth-links" class="auth-links"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="../../index.html" class="navbar-logo">Tameng</a>
 
-    <main>
-        <section class="form-section">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="material-icons">menu</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-links">Beranda</a>
+                </li>
+                <li class="nav-item" id="history-link" style="display: none;">
+                    <a href="../../history.html" class="nav-links">Riwayat</a>
+                </li>
+                <li class="nav-item nav-item-auth">
+                    <div id="auth-links" class="auth-links"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="form-section">
             <div class="section-container">
-                <div class="form-card">
+                <div class="form-card checkout-form-card">
                     <div class="progress-bar">
                         <div class="progress-step done">
                             <div class="step-number">1</div>
-                            <div class="step-name">Details</div>
+                            <div class="step-name">Detail</div>
                         </div>
                         <div class="progress-step active">
                             <div class="step-number">2</div>
-                            <div class="step-name">Payment</div>
+                            <div class="step-name">Pembayaran</div>
                         </div>
                     </div>
-                    <h2 class="section-title">Checkout</h2>
-                    <div class="checkout-summary">
-                        <h3>Premium to Pay: <span id="premium-display">Rp 0</span></h3>
+                    <h2 class="section-title checkout-title" style="text-align: left;">Konfirmasi Pembayaran</h2>
+                    <div class="total-price-display" style="text-align: left;">
+                        <p style="font-size: 1.2em; margin-bottom: 5px;">Total Pembayaran</p>
+                        <span id="premium-display" style="font-size: 2em; font-weight: bold; color: #333;">Rp 0</span>
                     </div>
                     
                     <div class="payment-methods-selection">
-                        <h3>Choose Payment Method</h3>
-                        <div class="form-group full-width">
-                            <label for="payment-method-select">Payment Method</label>
-                            <select id="payment-method-select" class="form-control" required>
-                                <option value="" disabled selected>Select Payment Method</option>
-                                <option value="credit-card">Credit Card</option>
-                                <option value="virtual-account">Virtual Account (VA)</option>
-                                <option value="e-wallet">E-Wallet</option>
-                                <option value="qris">QRIS</option>
-                            </select>
+                        <h3>Pilih Metode Pembayaran</h3>
+                        <div class="payment-options-grid" id="payment-options-grid">
+                            <input type="radio" id="payment-credit-card" name="payment-method" value="credit-card" class="hidden-radio">
+                            <label for="payment-credit-card" class="payment-option-box">
+                                Kartu Kredit
+                            </label>
+
+                            <input type="radio" id="payment-virtual-account" name="payment-method" value="virtual-account" class="hidden-radio">
+                            <label for="payment-virtual-account" class="payment-option-box">
+                                Virtual Account (VA)
+                            </label>
+
+                            <input type="radio" id="payment-e-wallet" name="payment-method" value="e-wallet" class="hidden-radio">
+                            <label for="payment-e-wallet" class="payment-option-box">
+                                E-Wallet
+                            </label>
+
+                            <input type="radio" id="payment-qris" name="payment-method" value="qris" class="hidden-radio">
+                            <label for="payment-qris" class="payment-option-box">
+                                QRIS
+                            </label>
                         </div>
-                        <div id="payment-details-placeholder" style="margin-top: 15px; padding: 15px; border: 1px dashed #ccc; border-radius: 8px; min-height: 50px; text-align: center; color: #666;">
-                            Please select a payment method.
+                        <div id="payment-details-placeholder" class="payment-details-placeholder">
+                            Silakan pilih metode pembayaran.
                         </div>
                     </div>
 
-                    <button type="button" id="pay-now-button" class="cta-button full-width">Pay Now</button>
+                    <button type="button" id="pay-now-button" class="cta-button full-width-button dark-button">Bayar Sekarang</button>
                     <p id="payment-message" style="text-align: center; margin-top: 20px;"></p>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="section-container">
-            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
         </div>
-    </footer>
+    </div>
+
+    <div class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-column">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="../../pages/car-insurance/car-insurance.html">Asuransi Mobil</a></li>
+                    <li><a href="../../pages/health-insurance/health-insurance.html">Asuransi Kesehatan</a></li>
+                    <li><a href="../../pages/life-insurance/life-insurance.html">Asuransi Jiwa</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tameng</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>&copy; 2025 Asuransi Tameng</h3>
+                <p>Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="../../public/js/app.js"></script>
     <script src="../../public/js/auth.js"></script>
     <script src="../../public/js/car-insurance-checkout.js"></script>
-</body>
-</html>/div>
-    </footer>
-
-    <script src="../../public/js/car-insurance.js"></script>
-    <script src="../../public/js/app.js"></script>
-    <script src="../../public/js/auth.js"></script>
 </body>
 </html>

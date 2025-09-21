@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkoutButton.addEventListener('click', () => {
         localStorage.setItem('currentPremium', premium);
-        localStorage.setItem('currentProductName', 'Life Insurance'); // Store product name
-        localStorage.setItem('currentProductType', 'Life'); // Store product type
+        localStorage.setItem('currentProductName', 'Life Insurance');
+        localStorage.setItem('currentProductType', 'Life');
         window.location.href = '../life-insurance/life-insurance-checkout.html';
     });
 });

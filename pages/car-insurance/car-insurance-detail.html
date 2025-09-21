@@ -1,72 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Insurance Details - Tameng Insurance</title>
+    <title>Detail Asuransi Mobil - Asuransi Tameng</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="../../index.html" class="navbar-logo">Tameng</a>
-                <div class="nav-right">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="../../index.html" class="nav-links active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">Contact</a>
-                        </li>
-                    </ul>
-                    <div id="auth-links" class="auth-links"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="../../index.html" class="navbar-logo">Tameng</a>
 
-    <main>
-        <section class="product-detail-section">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="material-icons">menu</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-links">Beranda</a>
+                </li>
+                <li class="nav-item" id="history-link" style="display: none;">
+                    <a href="../../history.html" class="nav-links">Riwayat</a>
+                </li>
+                <li class="nav-item nav-item-auth">
+                    <div id="auth-links" class="auth-links"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="product-detail-section">
             <div class="section-container">
                 <div class="product-detail-card">
-                    <div class="product-detail-header">
-                        <span class="material-icons icon">directions_car</span>
-                        <h1>Car Insurance</h1>
+                    <!-- Header Section -->
+                    <div class="card-header">
+                        <div class="insurance-logo">
+                            <img src="../../public/img/company/image (2).png" alt="Insurance Provider Logo"> <!-- Placeholder logo -->
+                        </div>
+                        <div class="product-info">
+                            <span class="product-label">Komprehensif</span>
+                            <div class="price-display">
+                                <span class="price">Rp 5.048.205</span> <span class="per-year">/ Tahun</span>
+                            </div>
+                            <span class="discount-badge">Diskon 25%</span>
+                            <a href="#" class="reward-link">Dapatkan penawaran spesial!</a>
+                        </div>
                     </div>
-                    <div class="product-detail-content">
-                        <p>Our Car Insurance provides comprehensive protection for your vehicle against a wide range of risks. Drive with peace of mind knowing that you are covered from accidents, theft, and other unforeseen damages.</p>
-                        
-                        <h2>Key Benefits</h2>
-                        <ul>
-                            <li>Comprehensive coverage for accidents and damages.</li>
-                            <li>Protection against theft and vandalism.</li>
-                            <li>24/7 roadside assistance.</li>
-                            <li>Third-party liability coverage.</li>
-                            <li>Personal accident cover for the driver.</li>
-                        </ul>
 
-                        <h2>Coverage Details</h2>
-                        <p>We offer various plans to suit your needs, from basic third-party liability to all-risk comprehensive packages. Our policies can be customized with add-ons such as flood and natural disaster coverage, windscreen protection, and more.</p>
+                    <!-- Expandable Content -->
+                    <div class="expandable-content">
+                        <div class="summary-content">
+                            <p>Asuransi Mobil kami memberikan perlindungan komprehensif untuk kendaraan Anda terhadap berbagai risiko. Berkendara dengan tenang mengetahui bahwa Anda terlindungi dari kecelakaan, pencurian, dan kerusakan tak terduga lainnya.</p>
+                            <p>Kami menawarkan berbagai paket untuk memenuhi kebutuhan Anda, mulai dari tanggung jawab pihak ketiga dasar hingga paket komprehensif semua risiko. Polis kami dapat disesuaikan dengan tambahan seperti perlindungan banjir dan bencana alam, perlindungan kaca depan, dan banyak lagi.</p>
+                        </div>
+                        <div class="full-content" style="display: none;">
+                            <h2>Manfaat Utama</h2>
+                            <ul>
+                                <li><span class="material-icons check-icon">check_circle</span> Perlindungan komprehensif untuk kecelakaan dan kerusakan.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Perlindungan terhadap pencurian dan vandalisme.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Bantuan pinggir jalan 24/7.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Perlindungan tanggung jawab pihak ketiga.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Perlindungan kecelakaan diri untuk pengemudi.</li>
+                            </ul>
 
-                        <div class="product-detail-cta">
-                            <a href="car-insurance.html" class="cta-button">Get a Quote</a>
+                            <h2>Detail Perlindungan</h2>
+                            <p>Kami menawarkan berbagai paket untuk memenuhi kebutuhan Anda, mulai dari tanggung jawab pihak ketiga dasar hingga paket komprehensif semua risiko. Polis kami dapat disesuaikan dengan tambahan seperti perlindungan banjir dan bencana alam, perlindungan kaca depan, dan banyak lagi.</p>
+                        </div>
+                        <button class="expand-button">Perluas</button>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="additional-info">
+                        <p><strong>Opsi Pembiayaan:</strong> Premi bisa dicicil 6x via Virtual Account.</p>
+                        <p><strong>Keunggulan Layanan:</strong> Jaringan bengkel luas, layanan pelanggan 24 jam.</p>
+                    </div>
+
+                    <!-- CTA Zone -->
+                    <div class="cta-zone">
+                        <div class="cta-bar">
+                            <p>Mau voucher hingga 2,5 juta? Jadwalkan konsultasi!</p>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="car-insurance.html" class="button primary-button full-width-button">Beli Langsung</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="section-container">
-            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
         </div>
-    </footer>
+    </div>
+
+    <div class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-column">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="../../pages/car-insurance/car-insurance.html">Asuransi Mobil</a></li>
+                    <li><a href="../../pages/health-insurance/health-insurance.html">Asuransi Kesehatan</a></li>
+                    <li><a href="../../pages/life-insurance/life-insurance.html">Asuransi Jiwa</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tameng</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>&copy; 2025 Asuransi Tameng</h3>
+                <p>Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="../../public/js/car-insurance.js"></script>
     <script src="../../public/js/app.js"></script>

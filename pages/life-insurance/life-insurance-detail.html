@@ -1,72 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Insurance Details - Tameng Insurance</title>
+    <title>Detail Asuransi Jiwa - Asuransi Tameng</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="../../index.html" class="navbar-logo">Tameng</a>
-                <div class="nav-right">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="../../index.html" class="nav-links active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">Contact</a>
-                        </li>
-                    </ul>
-                    <div id="auth-links" class="auth-links"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="../../index.html" class="navbar-logo">Tameng</a>
 
-    <main>
-        <section class="product-detail-section">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="material-icons">menu</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-links">Beranda</a>
+                </li>
+                <li class="nav-item" id="history-link" style="display: none;">
+                    <a href="../../history.html" class="nav-links">Riwayat</a>
+                </li>
+                <li class="nav-item nav-item-auth">
+                    <div id="auth-links" class="auth-links"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="product-detail-section">
             <div class="section-container">
                 <div class="product-detail-card">
-                    <div class="product-detail-header">
-                        <span class="material-icons icon">umbrella</span>
-                        <h1>Life Insurance</h1>
+                    <!-- Header Section -->
+                    <div class="card-header">
+                        <div class="insurance-logo">
+                            <img src="../../public/img/company/image (4).png" alt="Insurance Provider Logo"> <!-- Placeholder logo -->
+                        </div>
+                        <div class="product-info">
+                            <span class="product-label">Komprehensif</span>
+                            <div class="price-display">
+                                <span class="price">Rp 300.000</span> <span class="per-year">/ Bulan</span>
+                            </div>
+                            <span class="discount-badge">Diskon 10%</span>
+                            <a href="#" class="reward-link">Dapatkan penawaran spesial!</a>
+                        </div>
                     </div>
-                    <div class="product-detail-content">
-                        <p>Secure your family's financial future with our Life Insurance policies. In the event of an unfortunate incident, a lump-sum amount is paid to the nominee, ensuring your loved ones can maintain their standard of living and achieve their life goals.</p>
-                        
-                        <h2>Key Benefits</h2>
-                        <ul>
-                            <li>Financial security for your family.</li>
-                            <li>Wealth creation through investment components (in select plans).</li>
-                            <li>Tax benefits under section 80C.</li>
-                            <li>Coverage for critical illnesses and disabilities through riders.</li>
-                            <li>Loan facility against the policy.</li>
-                        </ul>
 
-                        <h2>Coverage Details</h2>
-                        <p>We offer a variety of life insurance products, including Term Life Insurance, Endowment Plans, and Unit Linked Insurance Plans (ULIPs). You can choose the sum assured and policy term that best aligns with your financial goals and life stage.</p>
+                    <!-- Expandable Content -->
+                    <div class="expandable-content">
+                        <div class="summary-content">
+                            <p>Asuransi Jiwa kami memberikan perlindungan finansial bagi keluarga Anda di masa depan. Dengan polis yang fleksibel, Anda dapat memastikan orang yang Anda cintai terlindungi secara finansial jika terjadi hal yang tidak terduga.</p>
+                            <p>Kami menawarkan berbagai jenis polis, termasuk asuransi jiwa berjangka dan seumur hidup, dengan pilihan manfaat tambahan seperti penyakit kritis dan cacat total tetap.</p>
+                        </div>
+                        <div class="full-content" style="display: none;">
+                            <h2>Manfaat Utama</h2>
+                            <ul>
+                                <li><span class="material-icons check-icon">check_circle</span> Perlindungan finansial untuk keluarga.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Pilihan polis berjangka dan seumur hidup.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Manfaat tambahan untuk penyakit kritis.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Manfaat cacat total dan tetap.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Fleksibilitas premi dan manfaat.</li>
+                            </ul>
 
-                        <div class="product-detail-cta">
-                            <a href="life-insurance.html" class="cta-button">Get a Quote</a>
+                            <h2>Detail Perlindungan</h2>
+                            <p>Kami menawarkan berbagai jenis polis, termasuk asuransi jiwa berjangka dan seumur hidup, dengan pilihan manfaat tambahan seperti penyakit kritis dan cacat total tetap. Sesuaikan polis Anda untuk memenuhi kebutuhan spesifik keluarga Anda.</p>
+                        </div>
+                        <button class="expand-button">Perluas</button>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="additional-info">
+                        <p><strong>Opsi Pembiayaan:</strong> Premi bisa dibayar bulanan atau tahunan.</p>
+                        <p><strong>Keunggulan Layanan:</strong> Konsultan pribadi, proses klaim cepat.</p>
+                    </div>
+
+                    <!-- CTA Zone -->
+                    <div class="cta-zone">
+                        <div class="cta-bar">
+                            <p>Butuh bantuan memilih? Konsultasi gratis dengan ahli kami!</p>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="life-insurance.html" class="button primary-button full-width-button">Beli Langsung</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="section-container">
-            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
         </div>
-    </footer>
+    </div>
+
+    <div class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-column">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="../../pages/car-insurance/car-insurance.html">Asuransi Mobil</a></li>
+                    <li><a href="../../pages/health-insurance/health-insurance.html">Asuransi Kesehatan</a></li>
+                    <li><a href="../../pages/life-insurance/life-insurance.html">Asuransi Jiwa</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tameng</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>&copy; 2025 Asuransi Tameng</h3>
+                <p>Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="../../public/js/life-insurance.js"></script>
     <script src="../../public/js/app.js"></script>

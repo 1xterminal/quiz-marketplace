@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tameng Insurance - Your Trusted Partner in Protection</title>
+    <title>Asuransi Tameng - Mitra Terpercaya Anda dalam Perlindungan</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,102 +11,162 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="index.html" class="navbar-logo">Tameng</a>
-                <div class="nav-right">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-links active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="history.html" class="nav-links">History</a>
-                        </li>
-                    </ul>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Tameng</a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="material-icons">menu</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-links active">Beranda</a>
+                </li>
+                <li class="nav-item" id="history-link" style="display: none;">
+                    <a href="history.html" class="nav-links">Riwayat</a>
+                </li>
+                <li class="nav-item nav-item-auth">
                     <div id="auth-links" class="auth-links"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero-tool-section">
-            <div class="section-container">
-                <div class="hero-tool-content">
-                    <h1>Find the Best Insurance, Instantly.</h1>
-                    <p>Compare plans from top providers and get the protection you need in minutes.</p>
-                    <form id="quote-form" class="quote-form">
-                        <div class="form-group-inline">
-                            <span class="material-icons">shield</span>
-                            <select id="insurance-type-select" name="insurance-type" required>
-                                <option value="" disabled selected>What insurance are you looking for?</option>
-                                <option value="health">Health Insurance</option>
-                                <option value="car">Car Insurance</option>
-                                <option value="life">Life Insurance</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="cta-button">
-                            See Plans
-                            <span class="material-icons">arrow_forward</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section class="how-it-works-section">
-            <div class="section-container">
-                <h2 class="section-title">Get Covered in 3 Easy Steps</h2>
-                <div class="steps-grid">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Compare Plans</h3>
-                        <p>Enter your details once and instantly compare quotes from top insurance providers.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Choose Your Coverage</h3>
-                        <p>Select the plan that best fits your needs and budget. Our experts are here to help if you have questions.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Get Insured</h3>
-                        <p>Finalize your application and get your policy documents online in minutes. You're now protected!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="products" class="products-section">
-            <div class="section-container">
-                <h2 class="section-title">Our Insurance Products</h2>
-                <div class="product-grid">
-                    <a href="pages/health-insurance/health-insurance-detail.html" class="product-card">
-                        <div class="card-icon"><span class="material-icons">favorite</span></div>
-                        <h3>Health Insurance</h3>
-                        <p>Comprehensive health plans for you and your family's peace of mind.</p>
-                    </a>
-                    <a href="pages/car-insurance/car-insurance-detail.html" class="product-card">
-                        <div class="card-icon"><span class="material-icons">directions_car</span></div>
-                        <h3>Car Insurance</h3>
-                        <p>Protect your vehicle against accidents, theft, and damages with top-tier coverage.</p>
-                    </a>
-                    <a href="pages/life-insurance/life-insurance-detail.html" class="product-card">
-                        <div class="card-icon"><span class="material-icons">umbrella</span></div>
-                        <h3>Life Insurance</h3>
-                        <p>Secure your family's financial future with our reliable life insurance policies.</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="section-container">
-            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
+                </li>
+            </ul>
         </div>
-    </footer>
+    </div>
+
+    <div class="main-content">
+        <div class="hero-section">
+            <div class="section-container hero-main-content">
+                <div class="hero-illustration-left">
+                    <img src="public/img/undraw_sweet-home_ezw3.svg" alt="Illustration of a home" class="hero-illustration-svg">
+                </div>
+                <div class="hero-content">
+                    <h1><strong>Perisai</strong> Anda Melawan Ketidakpastian Hidup</h1>
+                    <p>Pilih perlindungan Anda. Hidup dengan percaya diri. Kami melindungi Anda saat yang paling penting.</p>
+                    <a href="#products" class="cta-button">
+                        Lihat Paket
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="hero-illustration-right">
+                    <img src="public/img/undraw_ordinary-day_ak4e.svg" alt="Illustration of a person enjoying a day" class="hero-illustration-svg">
+                </div>
+            </div>
+            <div class="section-container logo-grid-container">
+                <div class="logo-grid">
+                    <img src="public/img/company/image (2).png" alt="Company Logo 1">
+                    <img src="public/img/company/image (3).png" alt="Company Logo 2">
+                    <img src="public/img/company/image (4).png" alt="Company Logo 3">
+                    <img src="public/img/company/image (5).png" alt="Company Logo 4">
+                    <img src="public/img/company/image (6).png" alt="Company Logo 5">
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="section-container">
+                <h2 class="section-title">Perlindungan Hebat dalam 3 Langkah Mudah</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon"><span class="material-icons">compare_arrows</span></div>
+                        <h3>Bandingkan dengan Transparan</h3>
+                        <p>Masukkan detail Anda sekali untuk membandingkan penawaran terbaik dari mitra terkemuka. Tidak ada biaya tersembunyi, hanya perbandingan yang jujur.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><span class="material-icons">speed</span></div>
+                        <h3>Pilih & Selesaikan dengan Cepat</h3>
+                        <p>Pilih paket yang paling sesuai untuk Anda. Platform kami yang mudah digunakan memungkinkan Anda menyelesaikan aplikasi dalam hitungan menit.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><span class="material-icons">verified_user</span></div>
+                        <h3>Dapatkan Perlindungan Terpercaya</h3>
+                        <p>Selesaikan aplikasi Anda dan langsung terlindungi. Kami hanya bekerja sama dengan perusahaan asuransi terpercaya untuk menjamin keamanan Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="products" class="products-section">
+            <div class="section-container">
+                <h2 class="section-title">Produk Asuransi Kami</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="card-icon"><span class="material-icons">favorite</span></div>
+                        <h3>Asuransi Kesehatan</h3>
+                        <p>Paket kesehatan komprehensif untuk ketenangan pikiran Anda dan keluarga.</p>
+                        <a href="pages/health-insurance/health-insurance-detail.html" class="cta-button-card">CEK HARGA KAMI</a>
+                        <div class="pricing-hint">MULAI DARI RP 2.000.000</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="card-icon"><span class="material-icons">directions_car</span></div>
+                        <h3>Asuransi Mobil</h3>
+                        <p>Lindungi kendaraan Anda dari kecelakaan, pencurian, dan kerusakan dengan perlindungan terbaik.</p>
+                        <a href="pages/car-insurance/car-insurance-detail.html" class="cta-button-card">CEK HARGA KAMI</a>
+                        <div class="pricing-hint">MULAI DARI RP 1.500.000</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="card-icon"><span class="material-icons">umbrella</span></div>
+                        <h3>Asuransi Jiwa</h3>
+                        <p>Amankan masa depan finansial keluarga Anda dengan polis asuransi jiwa kami yang terpercaya.</p>
+                        <a href="pages/life-insurance/life-insurance-detail.html" class="cta-button-card">CEK HARGA KAMI</a>
+                        <div class="pricing-hint">MULAI DARI RP 200.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials-section">
+            <div class="section-container">
+                <h2 class="section-title">Apa Kata Mereka Tentang Tameng</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Prosesnya cepat dan mudah dimengerti! Sangat membantu menemukan asuransi terbaik."</p>
+                        <p class="testimonial-author">- Budi Santoso</p>
+                        <p class="testimonial-description">Pemilik Polis Asuransi Mobil</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Pelayanan pelanggan yang luar biasa dan pilihan produk yang beragam. Sangat direkomendasikan!"</p>
+                        <p class="testimonial-author">- Siti Aminah</p>
+                        <p class="testimonial-description">Pemilik Polis Asuransi Kesehatan</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"Saya merasa aman setelah mendapatkan asuransi jiwa melalui Tameng. Prosesnya tidak ribet."</p>
+                        <p class="testimonial-author">- Joko Susilo</p>
+                        <p class="testimonial-description">Pemilik Polis Asuransi Jiwa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-column">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="pages/car-insurance/car-insurance.html">Asuransi Mobil</a></li>
+                    <li><a href="pages/health-insurance/health-insurance.html">Asuransi Kesehatan</a></li>
+                    <li><a href="pages/life-insurance/life-insurance.html">Asuransi Jiwa</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tameng</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>&copy; 2025 Asuransi Tameng</h3>
+                <p>Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="public/js/app.js"></script>
 </body>
