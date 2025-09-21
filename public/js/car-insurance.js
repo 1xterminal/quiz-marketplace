@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkoutButton.addEventListener('click', () => {
         localStorage.setItem('currentPremium', premium);
-        localStorage.setItem('currentProductName', 'Car Insurance'); // Store product name
-        localStorage.setItem('currentProductType', 'Car'); // Store product type
+        localStorage.setItem('currentProductName', 'Car Insurance');
+        localStorage.setItem('currentProductType', 'Car');
         window.location.href = '../car-insurance/car-insurance-checkout.html';
     });
 });

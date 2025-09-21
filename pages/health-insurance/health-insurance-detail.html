@@ -1,72 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Insurance Details - Tameng Insurance</title>
+    <title>Detail Asuransi Kesehatan - Asuransi Tameng</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="../../index.html" class="navbar-logo">Tameng</a>
-                <div class="nav-right">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="../../index.html" class="nav-links active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">Contact</a>
-                        </li>
-                    </ul>
-                    <div id="auth-links" class="auth-links"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="../../index.html" class="navbar-logo">Tameng</a>
 
-    <main>
-        <section class="product-detail-section">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="material-icons">menu</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-links">Beranda</a>
+                </li>
+                <li class="nav-item" id="history-link" style="display: none;">
+                    <a href="../../history.html" class="nav-links">Riwayat</a>
+                </li>
+                <li class="nav-item nav-item-auth">
+                    <div id="auth-links" class="auth-links"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="product-detail-section">
             <div class="section-container">
                 <div class="product-detail-card">
-                    <div class="product-detail-header">
-                        <span class="material-icons icon">favorite</span>
-                        <h1>Health Insurance</h1>
+                    <!-- Header Section -->
+                    <div class="card-header">
+                        <div class="insurance-logo">
+                            <img src="../../public/img/company/image (3).png" alt="Insurance Provider Logo"> <!-- Placeholder logo -->
+                        </div>
+                        <div class="product-info">
+                            <span class="product-label">Komprehensif</span>
+                            <div class="price-display">
+                                <span class="price">Rp 2.500.000</span> <span class="per-year">/ Tahun</span>
+                            </div>
+                            <span class="discount-badge">Diskon 15%</span>
+                            <a href="#" class="reward-link">Dapatkan penawaran spesial!</a>
+                        </div>
                     </div>
-                    <div class="product-detail-content">
-                        <p>Our Health Insurance plans are designed to provide you and your family with access to the best medical care without the financial burden. We offer a range of plans that cover hospitalization, outpatient treatments, and critical illnesses.</p>
-                        
-                        <h2>Key Benefits</h2>
-                        <ul>
-                            <li>Wide network of hospitals and clinics.</li>
-                            <li>Cashless claim facility.</li>
-                            <li>Coverage for pre and post-hospitalization expenses.</li>
-                            <li>Maternity and newborn baby cover.</li>
-                            <li>Annual health check-ups.</li>
-                        </ul>
 
-                        <h2>Coverage Details</h2>
-                        <p>Choose from our individual, family floater, or senior citizen plans. Our policies cover a wide array of medical expenses, including room rent, doctor fees, surgery costs, and more. You can also enhance your cover with critical illness and personal accident riders.</p>
+                    <!-- Expandable Content -->
+                    <div class="expandable-content">
+                        <div class="summary-content">
+                            <p>Asuransi Kesehatan kami memberikan perlindungan menyeluruh untuk Anda dan keluarga. Dapatkan akses ke jaringan rumah sakit dan klinik terkemuka, serta cakupan biaya rawat inap, rawat jalan, dan obat-obatan.</p>
+                            <p>Kami menawarkan berbagai pilihan paket yang dapat disesuaikan dengan kebutuhan dan anggaran Anda, termasuk cakupan untuk penyakit kritis, persalinan, dan perawatan gigi.</p>
+                        </div>
+                        <div class="full-content" style="display: none;">
+                            <h2>Manfaat Utama</h2>
+                            <ul>
+                                <li><span class="material-icons check-icon">check_circle</span> Cakupan rawat inap dan rawat jalan.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Akses ke jaringan rumah sakit dan klinik luas.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Cakupan obat-obatan dan biaya konsultasi dokter.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Pilihan cakupan untuk penyakit kritis.</li>
+                                <li><span class="material-icons check-icon">check_circle</span> Layanan darurat 24/7.</li>
+                            </ul>
 
-                        <div class="product-detail-cta">
-                            <a href="health-insurance.html" class="cta-button">Get a Quote</a>
+                            <h2>Detail Perlindungan</h2>
+                            <p>Kami menawarkan berbagai pilihan paket yang dapat disesuaikan dengan kebutuhan dan anggaran Anda, termasuk cakupan untuk penyakit kritis, persalinan, dan perawatan gigi. Dapatkan ketenangan pikiran dengan perlindungan kesehatan terbaik.</p>
+                        </div>
+                        <button class="expand-button">Perluas</button>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="additional-info">
+                        <p><strong>Opsi Pembiayaan:</strong> Premi bisa dicicil 12x via transfer bank.</p>
+                        <p><strong>Keunggulan Layanan:</strong> Layanan pelanggan responsif, proses klaim mudah.</p>
+                    </div>
+
+                    <!-- CTA Zone -->
+                    <div class="cta-zone">
+                        <div class="cta-bar">
+                            <p>Ingin tahu lebih banyak? Jadwalkan konsultasi gratis!</p>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="health-insurance.html" class="button primary-button full-width-button">Beli Langsung</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="section-container">
-            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
         </div>
-    </footer>
+    </div>
+
+    <div class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-column">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="../../pages/car-insurance/car-insurance.html">Asuransi Mobil</a></li>
+                    <li><a href="../../pages/health-insurance/health-insurance.html">Asuransi Kesehatan</a></li>
+                    <li><a href="../../pages/life-insurance/life-insurance.html">Asuransi Jiwa</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tameng</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>&copy; 2025 Asuransi Tameng</h3>
+                <p>Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="../../public/js/health-insurance.js"></script>
     <script src="../../public/js/app.js"></script>

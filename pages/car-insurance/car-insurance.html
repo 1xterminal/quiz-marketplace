@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Insurance - Tameng Insurance</title>
+    <title>Asuransi Mobil - Asuransi Tameng</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="../../index.html" class="navbar-logo">Tameng</a>
-                <div class="nav-right">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="../../index.html" class="nav-links active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links">Contact</a>
-                        </li>
-                    </ul>
-                    <div id="auth-links" class="auth-links"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="../../index.html" class="navbar-logo">Tameng</a>
 
-    <main>
-        <section class="form-section">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="material-icons">menu</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-links">Beranda</a>
+                </li>
+                <li class="nav-item" id="history-link" style="display: none;">
+                    <a href="../../history.html" class="nav-links">Riwayat</a>
+                </li>
+                <li class="nav-item nav-item-auth">
+                    <div id="auth-links" class="auth-links"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="form-section">
             <div class="section-container">
                 <div class="two-column-layout">
                     <div class="form-column">
@@ -39,55 +39,71 @@
                             <div class="progress-bar">
                                 <div class="progress-step active">
                                     <div class="step-number">1</div>
-                                    <div class="step-name">Details</div>
+                                    <div class="step-name">Detail</div>
                                 </div>
                                 <div class="progress-step">
                                     <div class="step-number">2</div>
-                                    <div class="step-name">Payment</div>
+                                    <div class="step-name">Pembayaran</div>
                                 </div>
                             </div>
-                            <h2 class="section-title">Car Insurance Details</h2>
+                            <h2 class="section-title">Detail Asuransi Mobil</h2>
                             <form id="car-insurance-form">
                                 <div class="form-grid">
                                     <div class="form-group">
-                                        <label for="car-brand">Merk mobil</label>
-                                        <span class="material-icons">directions_car</span>
-                                        <input type="text" id="car-brand" required>
+                                        <label for="car-brand">Merek mobil</label>
+                                        <div class="input-wrapper">
+                                            <span class="material-icons">directions_car</span>
+                                            <input type="text" id="car-brand" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="car-type">Jenis mobil</label>
-                                        <span class="material-icons">rv_hookup</span>
-                                        <input type="text" id="car-type" required>
+                                        <label for="car-type">Tipe mobil</label>
+                                        <div class="input-wrapper">
+                                            <span class="material-icons">rv_hookup</span>
+                                            <input type="text" id="car-type" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="car-year">Tahun pembuatan</label>
-                                        <span class="material-icons">event</span>
-                                        <input type="number" id="car-year" required>
+                                        <label for="car-year">Tahun produksi</label>
+                                        <div class="input-wrapper">
+                                            <span class="material-icons">event</span>
+                                            <input type="number" id="car-year" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="car-price">Harga mobil</label>
-                                        <span class="material-icons">sell</span>
-                                        <input type="number" id="car-price" required>
+                                        <div class="input-wrapper">
+                                            <span class="material-icons">sell</span>
+                                            <input type="number" id="car-price" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="license-plate">Nomor plat mobil</label>
-                                        <span class="material-icons">pin</span>
-                                        <input type="text" id="license-plate" required>
+                                        <div class="input-wrapper">
+                                            <span class="material-icons">pin</span>
+                                            <input type="text" id="license-plate" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="engine-number">Nomor mesin</label>
-                                        <span class="material-icons">engineering</span>
-                                        <input type="text" id="engine-number" required>
+                                        <div class="input-wrapper">
+                                            <span class="material-icons">engineering</span>
+                                            <input type="text" id="engine-number" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="chassis-number">Nomor rangka</label>
-                                        <span class="material-icons">confirmation_number</span>
-                                        <input type="text" id="chassis-number" required>
+                                        <div class="input-wrapper">
+                                            <span class="material-icons">confirmation_number</span>
+                                            <input type="text" id="chassis-number" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="owner-name">Nama pemilik</label>
-                                        <span class="material-icons">person</span>
-                                        <input type="text" id="owner-name" required>
+                                        <div class="input-wrapper">
+                                            <span class="material-icons">person</span>
+                                            <input type="text" id="owner-name" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="photo-front">Foto tampak depan</label>
@@ -114,29 +130,53 @@
                                         <input type="file" id="photo-engine" accept="image/*" required>
                                     </div>
                                     <div class="form-group full-width">
-                                        <button type="submit" class="cta-button">Calculate Premium</button>
+                                        <button type="submit" class="cta-button">Hitung Premi</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="result-column">
-                        <h3>Premium Calculation</h3>
+                        <h3>Perhitungan Premi</h3>
                         <div id="premium-result">
-                            <p>Please fill out the form to see your premium.</p>
+                            <p>Silakan isi formulir untuk melihat premi Anda.</p>
                         </div>
-                        <button id="checkout-button" class="cta-button" style="display: none;">Checkout</button>
+                        <button id="checkout-button" class="cta-button" style="display: none;">Lanjutkan Pembayaran</button>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="section-container">
-            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
         </div>
-    </footer>
+    </div>
+
+    <div class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-column">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="../../pages/car-insurance/car-insurance.html">Asuransi Mobil</a></li>
+                    <li><a href="../../pages/health-insurance/health-insurance.html">Asuransi Kesehatan</a></li>
+                    <li><a href="../../pages/life-insurance/life-insurance.html">Asuransi Jiwa</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tameng</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>&copy; 2025 Asuransi Tameng</h3>
+                <p>Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="../../public/js/car-insurance.js"></script>
     <script src="../../public/js/app.js"></script>

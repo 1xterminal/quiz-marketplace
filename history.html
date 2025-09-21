@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purchase History - Tameng Insurance</title>
+    <title>Riwayat Pembelian - Asuransi Tameng</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,43 +11,68 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="index.html" class="navbar-logo">Tameng</a>
-                <div class="nav-right">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-links">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-links active">History</a>
-                        </li>
-                    </ul>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Tameng</a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="material-icons">menu</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-links">Beranda</a>
+                </li>
+                <li class="nav-item" id="history-link">
+                    <a href="history.html" class="nav-links active">Riwayat</a>
+                </li>
+                <li class="nav-item nav-item-auth">
                     <div id="auth-links" class="auth-links"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="form-section">
-            <div class="section-container">
-                <div class="form-card">
-                    <h2 class="section-title">Purchase History</h2>
-                    <div id="history-list" class="history-list-container">
-                        <p>Loading purchase history...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="section-container">
-            <p>&copy; 2025 Tameng Insurance. All Rights Reserved.</p>
+                </li>
+            </ul>
         </div>
-    </footer>
+    </div>
+
+    <div class="main-content">
+        <div class="history-page-section">
+            <div class="section-container">
+                <h1 class="page-title">Riwayat Pembelian</h1>
+                <div id="history-list" class="history-list-container">
+                    <p>Memuat riwayat pembelian...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-column">
+                <h3>Produk</h3>
+                <ul>
+                    <li><a href="pages/car-insurance/car-insurance.html">Asuransi Mobil</a></li>
+                    <li><a href="pages/health-insurance/health-insurance.html">Asuransi Kesehatan</a></li>
+                    <li><a href="pages/life-insurance/life-insurance.html">Asuransi Jiwa</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Tameng</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>&copy; 2025 Asuransi Tameng</h3>
+                <p>Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="public/js/app.js"></script>
     <script src="public/js/auth.js"></script>
