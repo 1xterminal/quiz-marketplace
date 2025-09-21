@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carInsuranceForm = document.getElementById('car-insurance-form');
     const premiumResult = document.getElementById('premium-result');
     const checkoutButton = document.getElementById('checkout-button');
+    let premium = 0; // Declare premium in a higher scope
 
     carInsuranceForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentYear = new Date().getFullYear();
         const carAge = currentYear - carYear;
 
-        let premium = 0;
+        premium = 0;
         if (carAge >= 0 && carAge <= 3) {
             premium = 0.025 * carPrice;
         } else if (carAge > 3 && carAge <= 5) {
@@ -40,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     checkoutButton.addEventListener('click', () => {
-        // Do nothing for now
+        localStorage.setItem('currentPremium', premium);
+        localStorage.setItem('currentProductName', 'Car Insurance'); // Store product name
+        localStorage.setItem('currentProductType', 'Car'); // Store product type
+        window.location.href = '../car-insurance/car-insurance-checkout.html';
     });
 });
